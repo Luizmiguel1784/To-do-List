@@ -16,7 +16,7 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    @PostMapping()
+
     public UsuarioDTO criarUsuario(UsuarioDTO dto) {
 
         Usuario user = new Usuario(dto);
@@ -24,6 +24,8 @@ public class UsuarioService {
         UsuarioDTO udto = new UsuarioDTO(user);
         return udto;
     }
+
+
 
 
 }

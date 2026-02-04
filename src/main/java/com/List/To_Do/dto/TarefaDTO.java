@@ -1,6 +1,7 @@
 package com.List.To_Do.dto;
 
 import com.List.To_Do.entities.Status;
+import com.List.To_Do.entities.Tarefa;
 import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
@@ -20,6 +21,9 @@ public class TarefaDTO {
         this.status = status;
         this.dtInicio = dtInicio;
         this.dtFim = dtFim;
+    }
+
+    public TarefaDTO(Tarefa task) {
     }
 
     public String getNome() {

@@ -1,9 +1,9 @@
 package com.List.To_Do.entities;
 
+import com.List.To_Do.dto.TarefaDTO;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 @Entity
 public class Tarefa {
@@ -29,7 +29,7 @@ public class Tarefa {
         this.usuario = usuario;
     }
 
-    public Tarefa() {
+    public Tarefa(TarefaDTO dto) {
     }
 
     public Tarefa(long id, String nome, String descricao, Status status, LocalDate dtInicio, LocalDate dtFim) {
