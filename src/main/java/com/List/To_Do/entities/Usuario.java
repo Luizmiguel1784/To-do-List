@@ -1,7 +1,10 @@
-package entities;
+package com.List.To_Do.entities;
 
 import com.List.To_Do.dto.UsuarioDTO;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Usuario {
@@ -62,4 +65,7 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
     }
+    @OneToMany(mappedBy = "usuario")
+    private List<Tarefa> Tarefa = new
+            ArrayList<>();
 }

@@ -1,6 +1,6 @@
-package Repository;
+package com.List.To_Do.Repository;
 
-import entities.Usuario;
+import com.List.To_Do.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

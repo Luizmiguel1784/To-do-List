@@ -1,5 +1,6 @@
 package com.List.To_Do.dto;
 
+import com.List.To_Do.entities.Usuario;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
@@ -27,6 +28,9 @@ public class UsuarioDTO {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+    }
+
+    public UsuarioDTO(Usuario user) {
     }
 
 

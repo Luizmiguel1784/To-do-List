@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.UsuarioService;
+import com.List.To_Do.service.UsuarioService;
 
 @RestController
 @RequestMapping("usuario")
 public class UsuarioController {
+
+    private final UsuarioService usuarioService;
 
     public UsuarioController(UsuarioService usuarioService){
 
@@ -22,6 +24,6 @@ public class UsuarioController {
     @PostMapping
     public ResponseEntity<?> criarUsuario(@Valid @RequestBody UsuarioDTO dto){
 
-        return ResponseEntity.ok(usuarioService.criarUsurio(dto));
+        return ResponseEntity.ok(usuarioService.criarUsuario(dto));
     }
 }

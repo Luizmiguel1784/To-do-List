@@ -1,11 +1,10 @@
-package entities;
+package com.List.To_Do.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+
 @Entity
 public class Tarefa {
 @Id
@@ -17,6 +16,18 @@ public class Tarefa {
     private Status status;
     private LocalDate dtInicio;
     private LocalDate dtFim;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public Tarefa() {
     }
@@ -77,4 +88,7 @@ public class Tarefa {
     public void setDtFim(LocalDate dtFim) {
         this.dtFim = dtFim;
     }
+
+
+
 }

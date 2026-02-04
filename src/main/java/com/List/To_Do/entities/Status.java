@@ -1,4 +1,4 @@
-package entities;
+package com.List.To_Do.entities;
 
 public enum Status {
 

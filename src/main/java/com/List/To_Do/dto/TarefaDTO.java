@@ -1,6 +1,6 @@
 package com.List.To_Do.dto;
 
-import entities.Status;
+import com.List.To_Do.entities.Status;
 import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
