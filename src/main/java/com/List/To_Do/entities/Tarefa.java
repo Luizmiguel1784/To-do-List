@@ -13,7 +13,8 @@ public class Tarefa {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 
-    private long id;
+
+    private long tarefaid;
     private String nome;
     private String descricao;
     private Status status;
