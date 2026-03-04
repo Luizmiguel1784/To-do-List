@@ -1,10 +1,13 @@
 package com.List.To_Do.entities;
 
-import com.List.To_Do.dto.TarefaDTO;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
-
+@Getter
+@Setter
 @Entity
 public class Tarefa {
 @Id
@@ -20,75 +23,6 @@ public class Tarefa {
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Tarefa(TarefaDTO dto) {
-    }
-
-    public Tarefa(long id, String nome, String descricao, Status status, LocalDate dtInicio, LocalDate dtFim) {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.status = status;
-        this.dtInicio = dtInicio;
-        this.dtFim = dtFim;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public LocalDate getDtInicio() {
-        return dtInicio;
-    }
-
-    public void setDtInicio(LocalDate dtInicio) {
-        this.dtInicio = dtInicio;
-    }
-
-    public LocalDate getDtFim() {
-        return dtFim;
-    }
-
-    public void setDtFim(LocalDate dtFim) {
-        this.dtFim = dtFim;
-    }
-
 
 
 }
