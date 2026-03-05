@@ -4,16 +4,12 @@ import com.List.To_Do.Repository.TarefaRepository;
 import com.List.To_Do.Repository.UsuarioRepository;
 import com.List.To_Do.dto.TarefaRequest;
 import com.List.To_Do.dto.TarefaResponse;
-import com.List.To_Do.dto.UsuarioRequest;
 import com.List.To_Do.entities.Status;
 import com.List.To_Do.entities.Tarefa;
 import com.List.To_Do.entities.Usuario;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-
-import static java.util.stream.Collectors.toList;
 
 @Service
 public class TarefaService {
@@ -51,7 +47,7 @@ public class TarefaService {
     }
 
 
-    public  List<TarefaResponse> listarTarefa(Integer usuarioId) {
+    public List <TarefaResponse> listarTarefa(Integer usuarioId) {
         Usuario usuario = usuarioRepository.findById(usuarioId).orElseThrow(()-> new RuntimeException("Usuario não encontrado"));
 
         List<Tarefa> tarefas = usuario.getTarefas();
