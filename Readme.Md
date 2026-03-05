@@ -33,7 +33,7 @@ Post /usuarios
 "senha": "Int"
 }
 
-<img height="100" src="C:\Users\Luiz Miguel\OneDrive\Imagens\Screenshots\Captura de tela 2026-03-05 194834.png" width="100"/>
+![Criar usuário](src/Images/CriarUsuario.png)
   
 
 
@@ -58,14 +58,20 @@ Post /usuarios/{id}/tarefas
 "dtInicio": "2026-03-05",
 "dtFim": "2026-03-10"
 }
-            
-<img height="100" src="C:\Users\Luiz Miguel\OneDrive\Imagens\Screenshots\Captura de tela 2026-03-05 195112.png" width="100"/>
+
+
+![Criar tarefa](src/Images/CriarTarefa.png)
+
+
+
+
 
 Listar Tarefas do Usuario
 
 Get /usuarios/{id}/tarefas
                             
-<img height="100" src="C:\Users\Luiz Miguel\OneDrive\Imagens\Screenshots\Captura de tela 2026-03-05 195227.png" width="100"/>
+![Listar tarefas](src/Images/ListarTarefa.png)
+
 
 
 Atualizar Tarefas do Usuario
